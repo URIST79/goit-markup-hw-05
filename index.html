@@ -506,7 +506,7 @@
       </section>
     </main>
     <!--Footer section-->
-    <footer class="footer">
+    <footer class="foot er">
       <div class="container footer-container">
         <div class="logo-footer-p">
           <a class="logo-footer" href="./index.html"
@@ -572,5 +572,116 @@
         </div>
       </div>
     </footer>
+    <!--Modal Window with Backdrop-->
+    <div class="backdrop is-open">
+      <div class="modal">
+        <button class="close-btn">
+          <svg
+            class="clise-btn-icon"
+            width="8"
+            height="8"
+            aria-label="modal close icon"
+          >
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-p">Leave your contacts and we will call you back</p>
+        <form class="form">
+          <div class="form-item-input">
+            <label class="lable-modal" for="person">Name</label>
+            <div class="modal-form">
+              <input
+                class="input-lable"
+                type="text"
+                id="person"
+                name="user_name"
+                pattern="[a-zA-Zа-яА-ЯіІїЇ'єЄ]+"
+                title="Yurii"
+                required
+              />
+              <svg
+                class="modal-icon"
+                width="18"
+                height="18"
+                aria-label="user-icon"
+              >
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-item-input">
+            <label class="lable-modal" for="phone">Phone</label>
+            <div class="modal-form">
+              <input
+                class="input-lable"
+                type="tel"
+                id="phone"
+                name="user_phone"
+                pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+                required
+              />
+              <svg
+                class="modal-icon"
+                width="18"
+                height="24"
+                aria-label="phone-icon"
+              >
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-item-input">
+            <label class="lable-modal" for="email">Email</label>
+            <div class="modal-form">
+              <input
+                class="input-lable"
+                type="email"
+                id="email"
+                name="user_email"
+                required
+              />
+              <svg
+                class="modal-icon"
+                width="18"
+                height="24"
+                aria-label="email-icon"
+              >
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="texteria">
+            <lable class="lable-texteria">Comment</lable>
+            <textarea
+              class="user-coment"
+              name="user-coment"
+              id="user-coment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="review-form">
+            <input
+              type="checkbox"
+              class="checkbox visually-hidden"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+              required
+            />
+            <lable cllass="checkbox-lable" for="user-privacy">
+              <span class="privacy-policy">
+                <svg class="checkbox-icon" width="16" haight="16">
+                  <use href="./images/icons.svg#icon-property"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="form-privacy-policy" href="">Privacy Policy</a></lable
+            >
+          </div>
+          <button class="modal-button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
