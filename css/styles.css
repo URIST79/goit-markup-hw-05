@@ -472,7 +472,7 @@ p {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opasity 250ms linear, transition visibility 250 ms linear;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -489,28 +489,42 @@ p {
   padding: 24px;
   border-radius: 4px;
   background: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
 }
 .close-btn {
-  background-color: transparent;
+  background-color: #e7e9fc;
   position: absolute;
   top: 24px;
   right: 24px;
-  padding: 8px;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   line-height: 0;
   border-radius: 50%;
   fill: #2e2f42;
   stroke: rgba(0, 0, 0, 0.1);
-  border: 1px solid #f4f4fd;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-color: #e7e9fc;
   margin-bottom: 24px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-btn:hover,
-.close-btn.focus {
+.close-btn:hover{
+  border: none;
   fill: #ffffff;
   background-color: #404bbf;
 }
-.clise-btn-icon {
-  stroketransition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.close-btn.focus{
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff
+}
+.close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .modal-p {
   color: #2e2f42;
@@ -518,9 +532,8 @@ p {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.32px;
-  padding-top: 72px;
-  padding-bottom: 16px;
+  letter-spacing: 0.32px;  
+  margin-bottom: 16px;
 }
 .form {
 }
@@ -558,6 +571,8 @@ p {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: transparent;
 }
 .input-lable:focus {
   border: 1px solid #4d5ae5;
@@ -565,19 +580,20 @@ p {
 }
 .texteria {
   margin-bottom: 16px;
+  line-height: 1.17;
+   
 }
-.lable-texteria {
+/* .lable-texteria {
   display: block;
   color: #8e8f99;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.48px;
   margin-bottom: 4px;
-}
-.user-coment {
+} */
+.user-comment {
   width: 100%;
-  padding-top: 8px;
-  padding-left: 16px;
+  padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   min-height: 120px;
@@ -588,6 +604,7 @@ p {
   line-height: 1.7;
   letter-spacing: 0.48px;
   color: #2e2f4266;
+  background-color: transparent; 
 }
 .user-coment::placeholder {
   color: #2e2f4266;
@@ -597,12 +614,16 @@ p {
 }
 .checkbox:checked + .checkbox-lable > .privacy-policy {
   background-color: #404bbf;
+  fill:  #F4F4FD;
 }
 .checkbox:focus + .checkbox-lable > .privacy-policy {
   outline: 2px solid rgba(46, 47, 66, 0.4);
 }
+review-form{
+  margin-bottom: 24px;
+}
 .checkbox{
-  margin-right: 8px;
+  margin-right: 8;
 }
 .user-privacy {
   color: #8e8f99;
@@ -614,13 +635,23 @@ p {
   display: inline-flex;
   width: 16px;
   height: 16px;
-  border-radius: 6px;
+  border-radius: 2px; 
   flex-shrink: 0;
   fill: #404bbf;
   stroke-width: 1px;
   stroke: #404bbf;
   cursor: pointer;
   fill: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  justify-content: center; 
+}
+.checkbox-label{
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 .checkbox-icon {
 }
