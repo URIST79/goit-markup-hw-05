@@ -432,6 +432,9 @@ p {
   height: 72px;
   max-width: 264px;
 }
+.footer-media-subscribe {
+  display: block;
+}
 .footer-media {
   color: #ffffff;
   font-size: 16px;
@@ -460,6 +463,55 @@ p {
 .social-link-footer:focus {
   background-color: #31d0aa;
 }
+.footer-form {
+}
+.footer-form-p {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.footer-form-subscribe {
+  display: flex;
+  gap: 24px;
+}
+.footer-form-label {
+}
+.footer-form-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: #ffffff;
+}
+.footer-btn {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+}
+.footer-form-icon {
+  margin-left: 16px;
+}
 /* Modal Window with Backdrop */
 .backdrop {
   position: fixed;
@@ -472,7 +524,8 @@ p {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -489,7 +542,8 @@ p {
   padding: 24px;
   border-radius: 4px;
   background: #fcfcfc;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
 }
@@ -508,22 +562,21 @@ p {
   line-height: 0;
   border-radius: 50%;
   fill: #2e2f42;
-  stroke: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
   border-color: #e7e9fc;
   margin-bottom: 24px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-btn:hover,
-.close-btn.focus{
+.close-btn.focus {
   border: none;
   fill: #ffffff;
   background-color: #404bbf;
 }
 
 .close-btn-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-p {
   color: #2e2f42;
@@ -531,7 +584,7 @@ p {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.32px;  
+  letter-spacing: 0.32px;
   margin-bottom: 16px;
 }
 .form {
@@ -580,7 +633,6 @@ p {
 .texteria {
   margin-bottom: 16px;
   line-height: 1.17;
-   
 }
 /* .lable-texteria {
   display: block;
@@ -595,39 +647,41 @@ p {
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-   min-height: 120px;
+  min-height: 120px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   resize: none;
   font-size: 12px;
-  line-height: 1.7;
+  line-height: 1.17;
   letter-spacing: 0.48px;
   color: #2e2f4266;
-  background-color: transparent; 
+  background-color: transparent;
 }
 .user-coment::placeholder {
   color: #2e2f4266;
 }
 .user-coment:focus {
-  border: 1px solid #4d5ae5;
+  outline: transparent;
+  border-color: #4d5ae5;
 }
-/* .checkbox:checked + .checkbox-lable > .privacy-policy {
+.checkbox:checked + .checkbox-label > .privacy-policy {
   background-color: #404bbf;
-  fill:  #F4F4FD;
-} */
+  fill: #f4f4fd;
+  border: none;
+}
 .checkbox:checked + .checkbox-lable {
   background-color: #404bbf;
-  fill:  #F4F4FD;
-  border: none; 
+  fill: #f4f4fd;
+  border: none;
 }
 
 .checkbox:focus + .checkbox-lable > .privacy-policy {
   outline: 2px solid rgba(46, 47, 66, 0.4);
 }
-.review-form{
+.review-form {
   margin-bottom: 24px;
 }
-.checkbox{
+.checkbox {
   margin-bottom: 24px;
 }
 .user-privacy {
@@ -640,7 +694,7 @@ p {
   display: inline-flex;
   width: 16px;
   height: 16px;
-  border-radius: 2px; 
+  border-radius: 2px;
   flex-shrink: 0;
   fill: #404bbf;
   stroke-width: 1px;
@@ -648,11 +702,13 @@ p {
   cursor: pointer;
   fill: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
-.checkbox-label{
+.checkbox-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
