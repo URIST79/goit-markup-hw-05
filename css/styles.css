@@ -463,6 +463,9 @@ p {
 .social-link-footer:focus {
   background-color: #31d0aa;
 }
+.subscribe {
+  margin-left: 80px;
+}
 .footer-form {
 }
 .footer-form-p {
